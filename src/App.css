@@ -1,6 +1,57 @@
+
 .nav-bar {
-  display: inline
+  display: inline-block;
 }
-h2 {
-  color: black;
+
+.links {
+  margin: 10px;
+  display: inline-block;
+}
+
+.header h2, h3{
+  display: inline-block;
+}
+
+.header h3 {
+  margin-left: 50px;
+}
+
+.card_articles {
+  border: solid rgb(144, 158, 235) 1px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: antiquewhite;
+  width: 100%;
+}
+
+.card_articles .about, .pic {
+  display: inline-block;
+  width: auto;
+} 
+
+.card_articles .about {
+  vertical-align: top;
+}
+
+.card_articles .pic {
+  padding-right: 20px;
+}
+
+.card_articles .pic img{
+  width: 200px;
+  border-radius: 20px;
+}
+
+
+.card_articles .about .details div {
+  display: inline-block;
+
+}
+
+
+
+.card_articles .title {
+  margin: 20px 0px 20px 0px;
 }

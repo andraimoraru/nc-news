@@ -13,12 +13,10 @@ export default function ArticlesList() {
     }, [])
     
     return (
-        <div>
-            <ul>
+        <>
             {articles.map(article => {
                 return <ArticleMiniCard key={article.article_id} article={article}/>
             })}
-            </ul>
-        </div>
+        </>
     )
 }

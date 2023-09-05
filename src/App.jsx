@@ -12,8 +12,7 @@ import Home from './components/Home'
 function App() {
 
   return (
-    <>
-      <div> 
+    <div className='container'>
       <Header />
       <NavBar />
       <Routes>
@@ -21,8 +20,7 @@ function App() {
         <Route path = "/users" element={<UsersList/>}/>
         <Route path = "/user" element={<UserProfile/>}/>
       </Routes>
-      </div>
-    </>
+    </div>
   )
 }
 
