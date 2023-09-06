@@ -9,3 +9,10 @@ const NCNews = axios.create({
         .get(`/articles`)
         .then((response) => response.data.articles)
 };
+
+export const getArticleById = (article_id) => {
+  return NCNews
+      .get(`/articles/${article_id}`)
+      .then((response) => {
+        return response.data})
+};

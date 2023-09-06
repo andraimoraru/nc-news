@@ -3,9 +3,9 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import NavBar from './components/NavBar'
-import UsersList from './components/UsersList'
-import UserProfile from './components/UserProfile'
 import Home from './components/Home'
+import ArticlesList from './components/ArticlesList'
+import SingleArticle from './components/SingleArticle'
 
 
 
@@ -17,8 +17,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path ="/" element={<Home/>}/>
-        <Route path = "/users" element={<UsersList/>}/>
-        <Route path = "/user" element={<UserProfile/>}/>
+        <Route path = "/articles" element={<ArticlesList/>}/>
+        <Route path = "/articles/:article_id" element={<SingleArticle/>}/>
       </Routes>
     </div>
   )
