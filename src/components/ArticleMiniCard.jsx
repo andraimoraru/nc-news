@@ -1,10 +1,7 @@
-import ArticleCard from "./ArticleCard"
-import { Link, useParams } from "react-router-dom"
-import SingleArticle from "./SingleArticle"
-import ArticlesList from "./ArticlesList";
+
+import { Link} from "react-router-dom"
 
 export default function ArticleMiniCard({article}) {
-    console.log(article);
     return (
         
             <div key={article.article_id} className="card_articles">

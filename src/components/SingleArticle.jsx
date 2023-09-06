@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
-import { getArticleById } from "../utils/api";
+import { getArticleById, getCommentsByArticleId } from "../utils/api";
 import ArticleCard from "./ArticleCard";
+import CommentCard from "./CommentCard";
 
 export default function SingleArticle({article}) {
 
     const [singleArticle, setSingleArticle]= useState({});
     const [isLoading, setIsLoading]= useState(true);  
     const {article_id} = useParams();
+
+   
 
     useEffect(() => {
         setIsLoading(true);
@@ -21,7 +24,6 @@ export default function SingleArticle({article}) {
         })
     }, []);
 
-
     if (isLoading) return <p>Loading...</p>;
 
     return (
@@ -29,6 +31,10 @@ export default function SingleArticle({article}) {
         <ArticleCard 
         key={singleArticle.article_id} 
         article={singleArticle}       
+        />
+        <h2>  Comments  </h2>
+        <CommentCard
+        article={singleArticle}   
         />
         </>
     )

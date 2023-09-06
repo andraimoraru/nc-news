@@ -16,3 +16,11 @@ export const getArticleById = (article_id) => {
       .then((response) => {
         return response.data})
 };
+
+export const getCommentsByArticleId =(article_id) => {
+  return NCNews
+      .get(`/articles/${article_id}/comments`)
+      .then((response)=> {
+        return response.data
+      })
+}

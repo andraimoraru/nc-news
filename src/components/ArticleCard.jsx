@@ -1,7 +1,3 @@
-import ArticlesList from "./ArticlesList";
-
-
-
 export default function ArticleCard({article}) {
     return (
         <div className="article_view"> 
