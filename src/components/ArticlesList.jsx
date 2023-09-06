@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { getArticles } from "../utils/api";
 import ArticleMiniCard from "./ArticleMiniCard";
-import { Link } from "react-router-dom";
 
 export default function ArticlesList() {
 
@@ -19,7 +18,6 @@ export default function ArticlesList() {
     
     if (isLoading) return <p>Loading ...</p>;
 
-
     return (
         <>
             {articles.map((article) => {
@@ -27,7 +25,6 @@ export default function ArticlesList() {
                      <ArticleMiniCard key={article.article_id}
                      article={article}
                       />
-
 )
             })}
         </>
