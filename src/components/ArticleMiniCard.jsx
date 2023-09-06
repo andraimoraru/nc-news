@@ -1,22 +1,29 @@
+import ArticleCard from "./ArticleCard"
+import { Link, useParams } from "react-router-dom"
+import SingleArticle from "./SingleArticle"
+import ArticlesList from "./ArticlesList";
+
 export default function ArticleMiniCard({article}) {
+    console.log(article);
     return (
-
-      
-
+        
             <div key={article.article_id} className="card_articles">
                 <div className="pic">
                     <img src={article.article_img_url} alt={article.article_topic}></img> 
-                </div>
-                
+                </div>            
                 <div className="about">
+                    <h3>{article.title}</h3>
                     <div className="details">
-                        <div className="avatar"><img width={20} height={20} src={article.article_img_url} alt={article.article_topic}></img> </div>
-                        <div className="autor">{article.author}</div>
+                        <div className="autor">by <b>{article.author} </b> 
+                        in <Link>{article.topic}</Link> </div>
                         <div className="date">{article.created_at}</div>
+                    </div>                  
+
+                    <div className="more">
+                        <Link to ={`/articles/${article.article_id}`} key={article.article_id}>
+                        Read more ...
+                        </Link> 
                     </div>
-                    
-                    <div className="title">{article.title}</div>
-                    <div className="more"><button>Read more...</button></div>
 
                 </div>
                 
