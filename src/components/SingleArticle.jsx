@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
-import { getArticleById, getCommentsByArticleId } from "../utils/api";
+import { getArticleById } from "../utils/api";
 import ArticleCard from "./ArticleCard";
 import CommentCard from "./CommentCard";
 
