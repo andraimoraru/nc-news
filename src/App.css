@@ -1,6 +1,6 @@
 
-
 .nav-bar a {
+  color: black;
   display: inline-block;
   border: solid 1px rgb(53, 48, 53);
   border-radius: 10px;
@@ -11,24 +11,29 @@
 }
 
 .nav-bar a:hover {
+  color: #61bdc7;
   background-color: #f5f5dc;
 }
 
 .links {
+  color: black;
   margin: 10px;
   display: block;
 }
 
 .header h2, h3{
+  color: black;
   display: inline-block;
 }
 
 .header h3 {
+  color: black;
   margin-left: 50px;
 }
 
 .card_articles {
-  border: solid rgb(144, 158, 235) 1px;
+  color: black;
+  border: solid rgb(202, 166, 58) 1px;
   border-radius: 20px;
   font-size: 12px;
   margin-bottom: 20px;
@@ -43,6 +48,7 @@
 } 
 
 .card_articles .about {
+  color: black;
   vertical-align: top;
 }
 
@@ -60,8 +66,26 @@
 }
 
 .article_view {
+  color: black;
   background-color: #f8f2ea;
   border: 1px solid rgb(240, 215, 173);
   padding: 10px;
   border-radius: 20px;
+}
+.votes_view {
+  display: in;
+  align-items: center;
+  color: black;
+  background-color: #f8f2ea;
+  border: 1px solid rgb(240, 215, 173);
+  padding: 10px;
+  border-radius: 20px;
+
+}
+
+.vote_button {
+  color: rgb(0, 0, 0);
+  background-color: #c7e7eb;
+  border-radius: 20%;
+  border: 1px solid#0a3c41;
 }
