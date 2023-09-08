@@ -13,8 +13,8 @@ export default function ArticlesList() {
         .then((articles)=> {
             setArticles(articles);
             setIsLoading(false);
-        })
-    }, [])
+        });
+    }, []);
     
     if (isLoading) return <p>Loading ...</p>;
 
@@ -24,9 +24,8 @@ export default function ArticlesList() {
                 return (
                      <ArticleMiniCard key={article.article_id}
                      article={article}
-                      />
-)
+                      />)
             })}
         </>
-    )
-}
+    );
+};

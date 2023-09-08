@@ -5,6 +5,7 @@ export default function NavBar() {
         <div className="nav-bar">
             <Link to="/">Home</Link>
             <Link to="/articles">Articles</Link>
+            <Link to="/users">Users</Link>
         </div>
-    )
-}
+    );
+};
