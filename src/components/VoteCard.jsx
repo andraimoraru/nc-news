@@ -11,8 +11,8 @@ export default function VoteCard({article}) {
     useEffect(() => {
         getArticleById(article_id)
         .then((articleFromApi) => {
-            setDefaultVotes(articleFromApi.votes)
-        })
+            setDefaultVotes(articleFromApi.votes);
+        });
     }, []);
 
 
@@ -34,16 +34,14 @@ export default function VoteCard({article}) {
         <div> 
             <button className="vote_button" onClick={() => {
                 IncreaseVotes(article_id);
-            }}>
-                 + 1 
+            }}>               + 1 
             </button>
               Votes  {defaultVotes} 
              <button className="vote_button" onClick={()=> {
                 DecreaseVotes(article_id);
-             }}>
-                 - 1 
+             }}>                - 1 
             </button>
         </div>
     </div>
-)
-}
+    );
+};

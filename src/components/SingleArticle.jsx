@@ -4,6 +4,7 @@ import { getArticleById } from "../utils/api";
 import ArticleCard from "./ArticleCard";
 import CommentCard from "./CommentCard";
 import VoteCard from "./VoteCard"
+import CommentAdder from "./CommentAdder";
 
 export default function SingleArticle() {
 
@@ -34,10 +35,15 @@ export default function SingleArticle() {
         <VoteCard
         article = {singleArticle}
         />
+        <div>   
+        <CommentAdder 
+        article = {singleArticle}
+        /></div>
+       
         <h2>  Comments  </h2>
         <CommentCard
         article={singleArticle}   
         />
         </>
-    )
-}
+    );
+};

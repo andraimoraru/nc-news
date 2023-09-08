@@ -21,10 +21,7 @@ export default function ArticleMiniCard({article}) {
                         Read more ...
                         </Link> 
                     </div>
-
-                </div>
-                
+                </div>               
             </div>
-
-    )
-}
+    );
+};

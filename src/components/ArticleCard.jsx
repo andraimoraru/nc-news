@@ -9,5 +9,5 @@ export default function ArticleCard({article}) {
                 {article.body}
             </p>
         </div>
-    )
-}
+    );
+};
