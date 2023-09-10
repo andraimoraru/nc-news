@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { getCommentsByArticleId, postComment } from "../utils/api";
 import { useParams } from "react-router-dom";
 import { UserContext } from "./contexts/User";
+import CommentCard from "./CommentCard";
 
 export default function CommentAdder ({article}) {
     const {article_id}= useParams();
@@ -9,6 +10,7 @@ export default function CommentAdder ({article}) {
 
     const [newComment, setNewComment] = useState("");
     const [comments, setComments]= useState([]);
+    const [buttonStatus, setButtonStatus] = useState('Add your comment');
 
     useEffect(()=> {
         getCommentsByArticleId(article_id)
@@ -18,19 +20,26 @@ export default function CommentAdder ({article}) {
     }, []);
 
     const updateComments = () => {
-        getCommentsByArticleId(article_id)
-        .then((commentsFromApi)=> {
-            setComments(commentsFromApi);
+        setComments((currentComments)=>{
+            return [newComment, ... currentComments];
         });
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        postComment(article_id, user, newComment)
-        .then(() => {
+        if (newComment && user !== 'guest') {
+          postComment(article_id, user, newComment)
+          .then(() => {
             updateComments();
-        });
-        setNewComment('');       
+            setButtonStatus('Comment added');
+           });
+          setNewComment('');  
+        }
+        else {
+           if (user === 'guest') alert("Please log in");
+           if (!newComment) alert("Please add a comment.");
+           setButtonStatus('Add your comment');
+        }
     }
 
     return (
@@ -45,7 +54,7 @@ export default function CommentAdder ({article}) {
             ></textarea>
             </div>
             <div>         
-            <button className="vote_button"> Add </button>      
+            <button className="vote_button"> {buttonStatus} </button>      
             </div>
         </form>
     );

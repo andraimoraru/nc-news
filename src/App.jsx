@@ -6,6 +6,9 @@ import Home from './components/Home'
 import ArticlesList from './components/ArticlesList'
 import SingleArticle from './components/SingleArticle'
 import UsersList from './components/UsersList'
+import TopicsList from './components/TopicsList'
+import TopicCard from './components/TopicCard'
+import ArticlesByTopic from './components/ArticlesByTopic'
 
 
 function App() {
@@ -19,6 +22,10 @@ function App() {
         <Route path = "/articles" element={<ArticlesList/>}/>
         <Route path = "/articles/:article_id" element={<SingleArticle/>}/>
         <Route path = "/users" element={<UsersList/>}/>
+        <Route path = "/topics" element={<TopicsList/>}/>
+        <Route path = "/articles?topic=coding" element={<ArticlesByTopic/>}/>
+        <Route path = "/articles?topic=football" element={<ArticlesByTopic/>}/>
+        <Route path = "/articles?topic=cooking" element={<ArticlesByTopic/>}/>
       </Routes>
     </div>
   );
