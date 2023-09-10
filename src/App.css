@@ -32,7 +32,7 @@
 }
 
 .card_articles {
-  display: inline-block;
+  display: flex;
   color: black;
   border: solid rgb(202, 166, 58) 1px;
   border-radius: 20px;

@@ -41,6 +41,7 @@ export default function SingleArticle() {
         /></div>
        
         <h2>  Comments  </h2>
+        
         <CommentCard
         article={singleArticle}   
         />

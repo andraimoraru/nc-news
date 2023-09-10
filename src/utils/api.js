@@ -45,3 +45,19 @@ export const getUsers = () => {
   .get(`/users`)
   .then((response) =>  response.data.users)
 };
+
+export const getTopics = () => {
+  return NCNews
+  .get("/topics")
+  .then((response) => {
+    return response.data.topics
+    });
+};
+
+export const getArticlesByTopic = (topic) => {
+  return NCNews
+  .get(`/articles?topic=${topic}`)
+  .then((response) => {
+    return response.data.articles
+  });
+};
