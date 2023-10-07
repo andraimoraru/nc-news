@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "./contexts/User";
+import { UserContext } from "../contexts/User";
 
 export default function Header() {
 
@@ -7,7 +7,7 @@ export default function Header() {
 
     return (
         <div className="header">
-            <h2>NC NEWS</h2>
+            <h2>Andra's NEWS</h2>
             <h3> Welcome, {user}!</h3>
         </div>
     );
