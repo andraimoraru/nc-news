@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react"
 import { getCommentsByArticleId, postComment } from "../utils/api";
 import { useParams } from "react-router-dom";
-import { UserContext } from "./contexts/User";
-import CommentCard from "./CommentCard";
+import { UserContext } from "../contexts/User";
+
 
 export default function CommentAdder ({article}) {
     const {article_id}= useParams();

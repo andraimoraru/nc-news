@@ -16,10 +16,11 @@ export default function TopicCard({topic}) {
 
 
     return (
-        <div className="card_articles">
+        <div className="topics">
 
                 <div>{topic.slug}</div>
-                <div>{topic.description}</div>  
+                <div>{topic.description}</div> 
+                <br></br> 
                 <Link to ={`/articles?topic=${topic.slug}`} topic={topic} key={articles.article_id}>
                         See all ...
                 </Link> 

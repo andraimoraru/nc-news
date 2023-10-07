@@ -27,7 +27,7 @@ export default function CommentCard({article}) {
         <div >  
              {comments.map((comment)=> {
                    return (
-                <div className="article_view" key={comment.comment_id}> 
+                <div className="comment_view" key={comment.comment_id}> 
                 <b>{comment.author}: </b>  {comment.body}
                 </div>
             )
