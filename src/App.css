@@ -25,8 +25,8 @@ a:hover {
 }
 
 body {
-  margin: 10;
-  display: flex;
+  max-width: 700px;
+  margin: auto;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -89,6 +89,7 @@ button:focus-visible {
 }
 .site-title {
   font-size: 2rem;
+  height: 100%;
 }
 
 .nav ul {
@@ -262,6 +263,7 @@ button:focus-visible {
   border-color: #548faf;
 }
 .topics {
+  margin: auto;
   margin-left: 10px;
   color: black;
   border: solid rgb(202, 166, 58) 1px;

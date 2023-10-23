@@ -20,9 +20,7 @@ function App() {
         <Route path = "/articles/:article_id" element={<SingleArticle/>}/>
         <Route path = "/users" element={<UsersList/>}/>
         <Route path = "/topics" element={<TopicsList/>}/>
-        <Route path = "/articles?topic=coding" element={<ArticlesByTopic/>}/>
-        <Route path = "/articles?topic=football" element={<ArticlesByTopic/>}/>
-        <Route path = "/articles?topic=cooking" element={<ArticlesByTopic/>}/>
+        <Route path = "/articles?topic=:slug" element={<ArticlesByTopic />}/>
       </Routes>
     </div>
     </>

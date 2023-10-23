@@ -18,11 +18,10 @@ export default function TopicCard({topic}) {
     return (
         <div className="topics">
 
-                <div>{topic.slug}</div>
                 <div>{topic.description}</div> 
                 <br></br> 
                 <Link to ={`/articles?topic=${topic.slug}`} topic={topic} key={articles.article_id}>
-                        See all ...
+                        See all {topic.slug} articles ...
                 </Link> 
 
         </div>
