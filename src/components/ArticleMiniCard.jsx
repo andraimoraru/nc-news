@@ -10,7 +10,7 @@ export default function ArticleMiniCard({article}) {
                 <h3>{article.title}</h3>
                 <div className="details">
                     <div className="autor">by <b>{article.author} </b> 
-                        in <Link to ={`/articles?topic=${article.topic}`}>{article.topic}</Link> </div>
+                        in <Link to ={`/articles/topic/${article.topic}`}>{article.topic}</Link> </div>
                     <div className="date">{new Date(article.created_at).toUTCString()}</div>
                 </div>                  
                 <div className="more">

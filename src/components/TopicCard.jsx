@@ -17,10 +17,9 @@ export default function TopicCard({slug}) {
 
     return (
         <div className="topics">
-                <div>{slug}</div> 
-                <br></br> 
+                <h2>{slug.toUpperCase()}</h2> 
                 <Link to ={`/articles/topic/${slug}`} key={slug}>
-                        See all {slug} articles ...
+                        Check out all {slug} articles
                 </Link> 
         </div>
     );
