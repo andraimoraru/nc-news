@@ -12,7 +12,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
 }
 
 a {
@@ -20,6 +19,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -28,8 +28,6 @@ body {
   max-width: 700px;
   margin: auto;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -48,9 +46,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -72,11 +72,10 @@ button:focus-visible {
   box-sizing: border-box;
 }
 
-
 .container {
-  margin: 1rem;
   text-align: center;
 }
+
 .nav {
   background-color: #333;
   color: white;
@@ -87,6 +86,7 @@ button:focus-visible {
   padding: 0 1rem;
   margin-bottom: 10px;
 }
+
 .site-title {
   font-size: 2rem;
   height: 100%;
@@ -142,7 +142,6 @@ button:focus-visible {
   display: flex;
   align-items: center;
   align-content: space-between;
-  margin-left: 10px;
   color: black;
   border: solid rgb(202, 166, 58) 1px;
   font-size: 12px;
@@ -182,15 +181,15 @@ button:focus-visible {
   border: 1px solid rgb(240, 215, 173);
   padding: 10px;
 }
+
 .votes_view {
-  display: flex;
   align-content: center;
   align-items: center;
   color: black;
   background-color: #f8f2ea;
   border: 1px solid rgb(240, 215, 173);
   padding: 10px;
-
+  margin-bottom: 10px;
 }
 
 .vote_button {
@@ -211,25 +210,24 @@ button:focus-visible {
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 
 .comment-add {
   display: flex;
-  align-content: center;
+  align-content: space-between;
   color: black;
   background-color: #f8f2ea;
   border: 1px solid rgb(240, 215, 173);
   padding: 5px;
-
-
+  margin-bottom: 10px;
 }
 
 .comment_input {
   border-radius: 5px;
   margin-left: 10px;
   margin-right: 10px;
-
 }
 
 .user_card {
@@ -241,7 +239,6 @@ button:focus-visible {
   background-color: #f8f2ea;
   border: 1px solid rgb(240, 215, 173);
   padding: 10px;
-
 }
 
 .user_card .img {
@@ -252,19 +249,22 @@ button:focus-visible {
   margin-left: 10px;
   margin-right: 10px;
 }
+
 .comment_view {
   display: flex;
+  text-align: left;
   color: black;
   background-color: #f8f2ea;
   border: 1px solid rgb(240, 215, 173);
   padding: 10px;
 }
+
 .button_log {
   border-color: #548faf;
 }
+
 .topics {
   margin: auto;
-  margin-left: 10px;
   color: black;
   border: solid rgb(202, 166, 58) 1px;
   font-size: 12px;
@@ -272,5 +272,27 @@ button:focus-visible {
   padding: 20px;
   background-color: #f8f2ea;
   width: 100%;
+}
 
+.footer {
+  background-color: #333;
+  text-align: right;
+  color: white;
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card_topic_article {
+  align-items: center;
+  align-content: space-between;
+  color: black;
+  border: solid rgb(202, 166, 58) 1px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: #f8f2ea;
+  width: 100%;
 }

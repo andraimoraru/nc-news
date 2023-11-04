@@ -21,7 +21,7 @@ export default function CommentAdder ({article}) {
 
     const updateComments = () => {
         setComments((currentComments)=>{
-            return [newComment, ... currentComments];
+            return [newComment, ... comments];
         });
     };
 

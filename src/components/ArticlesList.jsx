@@ -16,15 +16,15 @@ export default function ArticlesList() {
         });
     }, []);
     
-    if (isLoading) return <p>Loading ...</p>;
+    if (isLoading) return <p> Loading ... </p>;
 
     return (
         <>
             {articles.map((article) => {
                 return (
                      <ArticleMiniCard key={article.article_id}
-                     article={article}
-                      />)
+                     article={article}/>
+                     )
             })}
         </>
     );

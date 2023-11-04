@@ -5,6 +5,7 @@ import ArticleCard from "./ArticleCard";
 import CommentCard from "./CommentCard";
 import VoteCard from "./VoteCard"
 import CommentAdder from "./CommentAdder";
+import ArticleBody from "./ArticleBody";
 
 export default function SingleArticle() {
 
@@ -32,6 +33,10 @@ export default function SingleArticle() {
         key={singleArticle.article_id} 
         article={singleArticle}       
         />
+        <ArticleBody
+        key={singleArticle.body} 
+        article={singleArticle}  
+        />
         <VoteCard
         article = {singleArticle}
         />
@@ -39,9 +44,6 @@ export default function SingleArticle() {
         <CommentAdder 
         article = {singleArticle}
         /></div>
-       
-        <h2>  Comments  </h2>
-        
         <CommentCard
         article={singleArticle}   
         />

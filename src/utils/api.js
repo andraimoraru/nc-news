@@ -54,9 +54,9 @@ export const getTopics = () => {
     });
 };
 
-export const getArticlesByTopic = (topic) => {
+export const getArticlesByTopic = (slug) => {
   return NCNews
-  .get(`/articles?topic=${topic}`)
+  .get(`/articles?topic=${slug}`)
   .then((response) => {
     return response.data.articles
   });

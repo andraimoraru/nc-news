@@ -7,7 +7,7 @@ export default function Navbar() {
   const {user} = useContext(UserContext);
   return (
     <nav className="nav">
-        <Link to="/" className="site-title">
+      <Link to="/" className="site-title">
         Andra's News
       </Link>
       <div className="welcome"> Welcome, {user}!</div>

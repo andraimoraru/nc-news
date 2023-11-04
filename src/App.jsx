@@ -6,6 +6,7 @@ import SingleArticle from './components/SingleArticle'
 import UsersList from './components/UsersList'
 import TopicsList from './components/TopicsList'
 import ArticlesByTopic from './components/ArticlesByTopic'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
         <Route path = "/articles/:article_id" element={<SingleArticle/>}/>
         <Route path = "/users" element={<UsersList/>}/>
         <Route path = "/topics" element={<TopicsList/>}/>
-        <Route path = "/articles?topic=:slug" element={<ArticlesByTopic />}/>
+        <Route path = "/articles/topic/:slug" element={<ArticlesByTopic />}/>
       </Routes>
+      <Footer />
     </div>
     </>
 

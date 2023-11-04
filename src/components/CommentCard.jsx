@@ -7,7 +7,6 @@ export default function CommentCard({article}) {
     const [isLoading, setIsLoading]= useState(true); 
     const {article_id} = useParams();
 
-  
     useEffect(()=>{
         setIsLoading(true);
         getCommentsByArticleId(article_id)
@@ -20,7 +19,7 @@ export default function CommentCard({article}) {
     }, []);
 
 
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <p> Loading... </p>;
 
     return (
 
@@ -28,7 +27,7 @@ export default function CommentCard({article}) {
              {comments.map((comment)=> {
                    return (
                 <div className="comment_view" key={comment.comment_id}> 
-                <b>{comment.author}: </b>  {comment.body}
+                <p><b>{comment.author}</b>: {comment.body} </p> 
                 </div>
             )
         })}

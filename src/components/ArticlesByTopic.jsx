@@ -1,30 +1,30 @@
-import { getArticlesByTopic } from "../utils/api";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import TopicCard from "./TopicCard";
+import { getArticlesByTopic } from "../utils/api";
 import ArticleCard from "./ArticleCard";
 
 export default function ArticlesByTopic() {
-    let { slug } = useParams();
+  const [articles, setArticles] = useState([]);
+  const { slug } = useParams(); 
 
-    const [articles, setArticles]= useState([]);
-    console.log('slug',slug);
-
-    useEffect(() => {
-        getArticlesByTopic(slug)
+  useEffect(() => {
+    if (slug) {
+      getArticlesByTopic(slug)
         .then((articlesFromApi) => {
-            setArticles(articlesFromApi)
+          setArticles(articlesFromApi);
+        })
+        .catch(error => {
+          console.error("Failed to fetch articles by topic:", error);
         });
-    }, []);
-    console.log(articles)
+    }
+  }, [slug]);
+  
 
-    return (
+  return (
     <>
-    {articles.map((article) => {
-            return (
-                <ArticleCard key={article.title} />
-            )
-    })}
+      {articles.map((article) => (
+        <ArticleCard key={article.article_id} article={article} />
+      ))}
     </>
-    )
+  );
 }
