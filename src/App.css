@@ -78,7 +78,7 @@ button:focus-visible {
 
 .nav {
   background-color: #333;
-  color: white;
+  color: #caa63a;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -194,6 +194,7 @@ button:focus-visible {
 }
 
 .vote_button {
+  size: 1rem;
   color: rgb(0, 0, 0);
   border: 1px solid#0a3c41;
   margin-left: 10px;
@@ -221,7 +222,7 @@ button:focus-visible {
   color: black;
   background-color: #f8f2ea;
   border: 1px solid rgb(240, 215, 173);
-  padding: 5px;
+  padding: 10px;
   margin-bottom: 10px;
 }
 
@@ -252,7 +253,6 @@ button:focus-visible {
 }
 
 .comment_view {
-  display: flex;
   text-align: left;
   color: black;
   background-color: #f8f2ea;
@@ -267,7 +267,7 @@ button:focus-visible {
 .topics {
   margin: auto;
   color: black;
-  border: solid rgb(202, 166, 58) 1px;
+  border: solid #caa63a 1px;
   font-size: 12px;
   margin-bottom: 20px;
   padding: 20px;
@@ -290,6 +290,7 @@ button:focus-visible {
   align-items: center;
   align-content: space-between;
   color: black;
+  text-align: justify;
   border: solid #caa63a 1px;
   font-size: 12px;
   margin-bottom: 10px;
@@ -297,3 +298,4 @@ button:focus-visible {
   background-color: #f8f2ea;
   width: 100%;
 }
+
